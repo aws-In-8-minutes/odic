@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.ASSUME_ROLE }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: arn:aws:iam::335357805095:role/gh_ROLE
+          aws-region: ap-south-1
       - run: aws sts get-caller-identity
       - run: aws s3 ls
       # Testing1 #test
