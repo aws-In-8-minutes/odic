@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::335357805095:role/OIDC_for_S3_EC2
+          role-to-assume: arn:aws:iam::335357805095:role/oidc_role
           aws-region: ap-south-1
       - run: aws sts get-caller-identity
       - run: aws s3 ls
